@@ -1,7 +1,7 @@
 # DE-ads-performance
 Zoomcamp project
-Ads Performance Data Pipeline
-This project builds a complete end-to-end data pipeline to analyze multi-channel advertising performance (TikTok, Meta, Google). It covers infrastructure, orchestration, transformation, and visualization.
+Ads Performance Data Pipeline Project Overview
+This project builds a complete end-to-end data pipeline to analyze multi-channel advertising performance (TikTok, Meta, Google) for year 2024. It covers infrastructure, orchestration, transformation, and visualization.
 Tech Stack
 Infrastructure: Terraform (GCP BigQuery)
 Orchestration: Mage AI
@@ -9,7 +9,12 @@ Transformation: dbt (Data Build Tool)
 Storage: Google BigQuery
 Visualization: Looker Studio
 
-Step-by-Step Reproduction Guide
+## Data Source
+The dataset used in this project is sourced from Kaggle: [Ads Performance Dataset.](https://www.kaggle.com/datasets/tahirmohd/global-ads-performance/data)
+Local Copy: For your convenience, a copy of the raw CSV is included in the /data directory of this repository.
+Note: If you download the data directly from Kaggle, ensure the filename matches global_ads_performance_dataset.csv or update the constant in the Mage loader.
+
+## Step-by-Step Reproduction Guide
 1. Prerequisites & Environment Setup
 Prerequisites
 - Google Cloud account with BigQuery enabled
@@ -61,15 +66,17 @@ First, verify your BigQuery connection:
 dbt debug --profiles-dir .
 ```
 Then, execute the transformation pipeline:
+Installs necessary dbt packages:
 ```bash
 dbt deps
 ```
-(Installs necessary dbt packages)
+Builds models in BigQuery:
 ```bash
 dbt run --profiles-dir .
 ```
-(Builds models in BigQuery)
+Runs data quality tests:
 ```bash
 dbt test --profiles-dir .
 ```
-(Runs data quality tests)
+
+
