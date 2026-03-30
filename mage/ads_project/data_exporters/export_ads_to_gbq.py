@@ -7,9 +7,14 @@ if 'data_exporter' not in globals():
 
 @data_exporter
 def export_data(df, *args, **kwargs):
-    project_id = 'kestra-sandbox-485523'
+    """
+    Instructions for Reproducibility:
+    1. Place your GCP service account JSON key in the 'auth/' directory.
+    2. Update the 'project_id' and 'table_id' with your BigQuery details.
+    """
+    project_id = 'your_gcp_project_id'
     table_id = f'{project_id}.ads_data_all.global_ads_performance'
-    key_path = "/home/src/google_credentials.json"
+    key_path = "/home/src/auth/your_gcp_service_account_key.json"
     
     credentials = service_account.Credentials.from_service_account_file(key_path)
     client = bigquery.Client(credentials=credentials, project=project_id)
