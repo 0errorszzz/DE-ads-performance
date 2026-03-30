@@ -80,5 +80,7 @@ Runs data quality tests:
 ```bash
 dbt test --profiles-dir .
 ```
+6. Dashboard is available in Lookers with the link below:
 
+https://lookerstudio.google.com/s/n8FcKebnHgk
 
