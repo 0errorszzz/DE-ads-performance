@@ -11,7 +11,9 @@ Visualization: Looker Studio
 
 ## Data Source
 The dataset used in this project is sourced from Kaggle: [Ads Performance Dataset.](https://www.kaggle.com/datasets/tahirmohd/global-ads-performance/data)
+
 Local Copy: For your convenience, a copy of the raw CSV is included in the /data directory of this repository.
+
 Note: If you download the data directly from Kaggle, ensure the filename matches global_ads_performance_dataset.csv or update the constant in the Mage loader.
 
 ## Step-by-Step Reproduction Guide
