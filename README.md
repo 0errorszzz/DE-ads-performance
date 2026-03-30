@@ -87,14 +87,6 @@ The raw data is located in the /data directory. Use Mage to load it into BigQuer
 Open the UI and run the ads_performance_etl pipeline.
 Important: Update the project_id and key_path in the Data Loader and Data Exporter blocks to match your environment.
 
-During the ingestion phase in Mage AI, I configured the BigQuery Exporter to implement:
-
-Time-Unit Partitioning: The global_ads_performance table is partitioned by ad_date (Daily). As seen in the BQ Schema, this allows BigQuery to perform partition pruning, significantly reducing scan volume and costs for date-range queries.
-
-Clustering: To further optimize performance, I applied Clustering on the platform and campaign_type columns. This accelerates filtering and aggregation operations, making the Looker Studio dashboard much more responsive.
-
-Schema Enforcement: I ensured data types were correctly cast (e.g., impressions as INTEGER, spend as FLOAT) during the load process to maintain data integrity.
-
 5. Data Transformation (dbt)
 Ensure you are in the dbt_env virtual environment and located in the project root.
 First, verify your BigQuery connection:
@@ -117,6 +109,34 @@ dbt test --profiles-dir .
 6. Dashboard is available in Lookers with the link below:
 
 https://lookerstudio.google.com/s/n8FcKebnHgk
+
+## Workflow Orchestration (Mage AI)
+<img width="2505" height="1227" alt="image" src="https://github.com/user-attachments/assets/f243c11f-0a0c-4cf2-a626-62be7b370587" />
+
+The data ingestion pipeline is orchestrated using Mage AI.
+
+The pipeline consists of three main steps:
+
+1. Data Loader  
+   - Loads raw CSV data from local storage (or GCS)
+
+2. Transformer  
+   - Applies initial preprocessing and data cleaning
+
+3. Data Exporter  
+   - Loads processed data into BigQuery
+
+This forms a complete end-to-end DAG pipeline:
+
+Raw Data → Transform → BigQuery
+During the ingestion phase in Mage AI, I configured the BigQuery Exporter to implement:
+
+Time-Unit Partitioning: The global_ads_performance table is partitioned by ad_date (Daily). As seen in the BQ Schema, this allows BigQuery to perform partition pruning, significantly reducing scan volume and costs for date-range queries.
+
+Clustering: To further optimize performance, I applied Clustering on the platform and campaign_type columns. This accelerates filtering and aggregation operations, making the Looker Studio dashboard much more responsive.
+
+Schema Enforcement: I ensured data types were correctly cast (e.g., impressions as INTEGER, spend as FLOAT) during the load process to maintain data integrity.
+
 
 ## Dashboard
 <img width="1429" height="1069" alt="image" src="https://github.com/user-attachments/assets/c5626a76-3310-4889-b926-4a29051c8754" />
