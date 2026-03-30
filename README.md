@@ -184,7 +184,6 @@ This project demonstrates how an end-to-end data pipeline can be used to analyze
 
 The results highlight the importance of conversion efficiency in driving business outcomes. Rather than increasing advertising spend, improving conversion rates may lead to better overall performance.
 
-Future improvements could include:
-- Adding more granular data (e.g., campaign-level analysis)
-- Automating pipeline scheduling
+Future work directions could include:
+- Campaign-level analysis
 - Incorporating additional KPIs and anomaly detection
