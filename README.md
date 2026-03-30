@@ -53,7 +53,9 @@ cd mage
 docker-compose up
 ```
 Access Mage UI at localhost:6789, update the project_id in the pipeline blocks, and run ads_performance_etl.
+
 The raw data is located in the /data directory. Use Mage to load it into BigQuery:
+
 Start Mage: 
 ```bash
 mage start ads_project
