@@ -9,6 +9,19 @@ Transformation: dbt (Data Build Tool)
 Storage: Google BigQuery
 Visualization: Looker Studio
 
+## Problem Description
+In modern digital marketing, companies run advertising campaigns across multiple platforms such as TikTok Ads, Meta Ads, and Google Ads. However, it is often unclear which platform delivers the best return and what factors drive performance changes over time.
+
+This project builds an end-to-end data pipeline to analyze multi-channel advertising performance for the year 2024. The goal is to:
+
+- Compare the return on ad spend (ROAS) across different platforms
+- Analyze how conversion efficiency changes over time
+- Identify key periods where performance declines and understand the underlying causes
+
+By integrating data ingestion, transformation, and visualization, this project provides insights into how advertising effectiveness is influenced not just by spending, but by conversion behavior.
+
+The analysis reveals that performance fluctuations are primarily driven by changes in conversion rate rather than advertising spend.
+
 ## Data Source
 The dataset used in this project is sourced from Kaggle: [Ads Performance Dataset.](https://www.kaggle.com/datasets/tahirmohd/global-ads-performance/data)
 
