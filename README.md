@@ -18,9 +18,13 @@ The analysis reveals that performance fluctuations are primarily driven by chang
 
 ## Tech Stack
 Infrastructure: Terraform (GCP BigQuery)
+
 Orchestration: Mage AI
+
 Transformation: dbt (Data Build Tool)
+
 Storage: Google BigQuery
+
 Visualization: Looker Studio
 
 ## Architecture
