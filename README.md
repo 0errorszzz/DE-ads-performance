@@ -99,3 +99,44 @@ dbt test --profiles-dir .
 
 https://lookerstudio.google.com/s/n8FcKebnHgk
 
+## Dashboard
+<img width="1429" height="1069" alt="image" src="https://github.com/user-attachments/assets/c5626a76-3310-4889-b926-4a29051c8754" />
+
+### 1. ROAS by Platform
+This chart compares the average return on ad spend (ROAS) across platforms. TikTok Ads shows the highest ROAS, indicating the most efficient use of advertising budget. Meta Ads performs moderately, while Google Ads has the lowest ROAS among the three.
+
+ROAS is defined as revenue divided by spend, and reflects how effectively each dollar of advertising generates revenue.
+
+---
+
+### 2. Conversion Rate over Time
+The conversion rate (conversions / clicks) shows fluctuations throughout the year, with a noticeable decline around July and a peak toward the end of the year.
+
+This suggests that user willingness to complete a purchase after clicking ads decreases in mid-year and increases during later months.
+
+---
+
+### 3. ROAS over Time
+ROAS follows a similar trend to the conversion rate, reaching its lowest point in July and increasing toward November and December.
+
+The alignment between ROAS and conversion rate indicates that overall advertising performance is strongly influenced by conversion efficiency rather than changes in traffic.
+
+A possible explanation is seasonal behavior: mid-year (summer months) often has lower consumer purchase intent, while late-year peaks may be driven by major shopping events such as Black Friday and holiday promotions.
+
+---
+
+### 4. Spend vs Revenue over Time
+Advertising spend remains relatively stable across the year, while revenue shows a clear dip in mid-year and an increase toward the end of the year.
+
+This confirms that the performance drop in July is not due to reduced spending, but rather decreased conversion efficiency. Conversely, higher revenue at the end of the year suggests improved conversion effectiveness rather than increased budget.
+
+---
+
+### Overall Insight
+Across all charts, a consistent pattern emerges: performance declines in mid-year and improves toward year-end. 
+
+Since spending remains stable while both conversion rate and ROAS fluctuate, this indicates that changes in performance are primarily driven by user conversion behavior rather than advertising investment.
+
+These findings suggest that improving conversion efficiency during mid-year (e.g., through better targeting or optimized landing pages) could significantly enhance overall advertising performance.
+
+
