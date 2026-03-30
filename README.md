@@ -1,13 +1,7 @@
 # DE-ads-performance
-Zoomcamp project
-Ads Performance Data Pipeline Project Overview
+
+## Ads Performance Data Pipeline Project Overview
 This project builds a complete end-to-end data pipeline to analyze multi-channel advertising performance (TikTok, Meta, Google) for year 2024. It covers infrastructure, orchestration, transformation, and visualization.
-Tech Stack
-Infrastructure: Terraform (GCP BigQuery)
-Orchestration: Mage AI
-Transformation: dbt (Data Build Tool)
-Storage: Google BigQuery
-Visualization: Looker Studio
 
 ## Problem Description
 In modern digital marketing, companies run advertising campaigns across multiple platforms such as TikTok Ads, Meta Ads, and Google Ads. However, it is often unclear which platform delivers the best return and what factors drive performance changes over time.
@@ -21,6 +15,21 @@ This project builds an end-to-end data pipeline to analyze multi-channel adverti
 By integrating data ingestion, transformation, and visualization, this project provides insights into how advertising effectiveness is influenced not just by spending, but by conversion behavior.
 
 The analysis reveals that performance fluctuations are primarily driven by changes in conversion rate rather than advertising spend.
+
+## Tech Stack
+Infrastructure: Terraform (GCP BigQuery)
+Orchestration: Mage AI
+Transformation: dbt (Data Build Tool)
+Storage: Google BigQuery
+Visualization: Looker Studio
+
+## Architecture
+
+Raw CSV (Kaggle)
+→ Mage ETL Pipeline
+→ BigQuery (Raw Table)
+→ dbt (Staging + Fact Models)
+→ Looker Studio Dashboard
 
 ## Data Source
 The dataset used in this project is sourced from Kaggle: [Ads Performance Dataset.](https://www.kaggle.com/datasets/tahirmohd/global-ads-performance/data)
@@ -40,7 +49,7 @@ Prerequisites
 
 Clone the repository and install the required Python packages:
 ```bash
-git clone [<your-repo-link>](https://github.com/0errorszzz/DE-ads-performance.git)
+git clone https://github.com/0errorszzz/DE-ads-performance.git
 cd DE-ads-performance
 pip install -r requirements.txt
 ```
@@ -65,14 +74,12 @@ Ensure Docker Desktop is running, then:
 cd mage
 docker-compose up
 ```
-Access Mage UI at localhost:6789, update the project_id in the pipeline blocks, and run ads_performance_etl.
+Access Mage UI at http://localhost:6789
+
+Update the project_id and key_path in the pipeline blocks, and run ads_performance_etl.
 
 The raw data is located in the /data directory. Use Mage to load it into BigQuery:
 
-Start Mage: 
-```bash
-mage start ads_project
-```
 Open the UI and run the ads_performance_etl pipeline.
 Important: Update the project_id and key_path in the Data Loader and Data Exporter blocks to match your environment.
 
@@ -139,4 +146,13 @@ Since spending remains stable while both conversion rate and ROAS fluctuate, thi
 
 These findings suggest that improving conversion efficiency during mid-year (e.g., through better targeting or optimized landing pages) could significantly enhance overall advertising performance.
 
+## Conclusion
 
+This project demonstrates how an end-to-end data pipeline can be used to analyze advertising performance across multiple platforms.
+
+The results highlight the importance of conversion efficiency in driving business outcomes. Rather than increasing advertising spend, improving conversion rates may lead to better overall performance.
+
+Future improvements could include:
+- Adding more granular data (e.g., campaign-level analysis)
+- Automating pipeline scheduling
+- Incorporating additional KPIs and anomaly detection
