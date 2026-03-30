@@ -1,0 +1,11 @@
+name: 'ads_transform'
+version: '1.0.0'
+config-version: 2
+
+profile: 'ads_project_config' 
+
+model-paths: ["models"]
+
+models:
+  ads_transform:
+    materialized: table

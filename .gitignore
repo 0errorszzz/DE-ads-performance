@@ -1,7 +1,46 @@
+#files
+*.json
+*.key
+.env
+auth/
+credentials/
+
+# Mage
+mage/mage_data/
+**/.variables/
+**/.operation_history/
+mage-ai.db
+
+#terraform
+terraform.exe
+.terraform/
+terraform.tfstate*
+*.tfvars
+*.tfplan
+terraform/.terraform/
+*.tfstate
+*.tfstate.backup
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
 *$py.class
+.venv/
+env/
+venv/
+.python-version
+
+# --- dbt ---
+target/
+dbt_packages/
+logs/
+dbt_modules/
+profiles.yml
+
+# --- OS & IDE ---
+.DS_Store
+.vscode/
+.idea/
 
 # C extensions
 *.so

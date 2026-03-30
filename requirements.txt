@@ -1,0 +1,13 @@
+# --- Data Orchestration & ETL ---
+mage-ai
+
+# --- Database & Transformation ---
+dbt-core
+dbt-bigquery
+google-cloud-bigquery
+google-cloud-storage
+
+# --- Data Analysis & File Handling ---
+pandas
+numpy
+pyarrow

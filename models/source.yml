@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: ads_raw_data  
+    database: kestra-sandbox-485523
+    schema: ads_data_all
+    tables:
+      - name: global_ads_performance 

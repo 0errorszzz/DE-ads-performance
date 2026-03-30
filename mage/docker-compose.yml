@@ -1,0 +1,14 @@
+version: '3'
+services:
+  magic:
+    # 重点：不要用 latest，改用这个具体版本
+    image: mageai/mageai:0.9.70
+    command: mage start ads_project
+    environment:
+      USER_CODE_PATH: /home/src/ads_project
+      GOOGLE_APPLICATION_CREDENTIALS: /home/src/google_credentials.json
+    ports:
+      - 6789:6789
+    volumes:
+      - .:/home/src
+    restart: always

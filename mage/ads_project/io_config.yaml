@@ -1,0 +1,3 @@
+default:
+  GOOGLE_SERVICE_ACCOUNT_KEY_FILEPATH: "/home/src/google_credentials.json"
+  GOOGLE_PROJECT_ID: "kestra-sandbox-485523"
